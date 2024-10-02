@@ -4,8 +4,10 @@ const Player = (props)=>{
  const [playerName, setPlayerName] = useState(props.player)
  const [isEditing, setIsEditing] = useState(false)
 
- const handleButtonClick = (event)=>{
-    setIsEditing(!isEditing)
+ const handleButtonClick = ()=>{
+    setIsEditing((editing)=>{
+      return editing = !isEditing
+    })
     
  }
  const handleNameChange = (event)=>{
